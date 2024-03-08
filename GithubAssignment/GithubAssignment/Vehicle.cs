@@ -7,5 +7,7 @@
         public int Gears { get; set; }
 
         public int Weight { get; set; }
+
+        public int Price { get; set; }
     }
 }
