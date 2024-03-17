@@ -4,8 +4,8 @@
     {
         private string _type;
 
-        public Motorbike(string make, string model, int year, double engineSize, string color, string type)
-            : base(make, model, year, engineSize, color)
+        public Motorbike(string make, string model, int year, double engineSize, string color, string type, int gears)
+            : base(make, model, year, engineSize, color, gears)
         {
           Type = type;
         }

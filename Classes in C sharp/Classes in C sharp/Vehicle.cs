@@ -5,15 +5,20 @@
     private int _year;
     private string _color;
     private double _engineSize;
+    private int _gears;
+    private int _currentGear;
 
-    public Vehicle(string make, string model, int year, double engineSize, string color)
+    public Vehicle(string make, string model, int year, double engineSize, string color, int gears)
     {
         Make = make;
         Model = model;
         Year = year;
         EngineSize = engineSize;
         PaintingWithColor(color);
+        Gears = gears;
     }
+
+    public int CurrentGear => _currentGear;
 
     public string Make
     {
@@ -80,6 +85,39 @@
     public string GetColor()
     {
         return _color;
+    }
+
+    public int Gears
+    {
+        get { return _gears; }
+        private set
+        {
+            if (value <= 0)
+            {
+                throw new ArgumentOutOfRangeException("Gear count must be greater than zero.");
+            }
+            _gears = value;
+        }
+    }
+
+    public void ChangeToUpperGear()
+    {
+        if (_currentGear++ > _gears)
+        {
+            throw new InvalidOperationException("You already reached the biggest possible gear.");
+        }
+
+        _currentGear++;
+    }
+
+    public void ChangeToLowerGear()
+    {
+        if (_currentGear-- < 0)
+        {
+            throw new InvalidOperationException("You are already on neutral.");
+        }
+
+        _currentGear--;
     }
 
     public virtual string GetInfo()

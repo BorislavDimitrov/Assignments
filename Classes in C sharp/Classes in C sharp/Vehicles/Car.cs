@@ -4,8 +4,8 @@
     {
         private int _doorsCount;
 
-        public Car(string make, string model, int year, double engineSize, string color, int doorsCount = 4)
-            : base(make, model, year, engineSize, color)
+        public Car(string make, string model, int year, double engineSize, string color, int gears, int doorsCount = 4)
+            : base(make, model, year, engineSize, color, gears)
         {
             DoorsCount = doorsCount;
         }
