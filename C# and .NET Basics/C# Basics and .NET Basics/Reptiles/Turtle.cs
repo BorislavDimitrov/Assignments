@@ -2,14 +2,24 @@
 {
     public class Turtle : Reptile
     {
-        public Turtle(string name, int age, int weight)
-            : base(name, age, weight)
+        public Turtle(string name, int age, int weight, string gender)
+            : base(name, age, weight, gender)
         {
         }
 
         public override string MakeSound()
         {
-            return "some turtle sound";
+            return "Some turtle sound";
+        }
+
+        public override void Move()
+        {
+            Console.WriteLine("The turle is either walking or swimming.");
+        }
+
+        public override void Eat(string food)
+        {
+            Console.WriteLine($"The turtle is eating {food}.");
         }
     }
 }

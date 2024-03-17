@@ -1,6 +1,6 @@
 ﻿namespace C__Basics_and_.NET_Basics
 {
-    public  class Animal
+    public class Animal
     {
         private string _name;
 
@@ -10,11 +10,12 @@
 
         private string _gender;
 
-        public Animal(string name, int age, int weight)
+        public Animal(string name, int age, int weight, string gender)
         {
             Name = name;
             Age = age;
             Weight = weight;
+            SetGender(gender);
         }
 
         public string Name {
@@ -42,7 +43,6 @@
                     throw new ArgumentOutOfRangeException("The age must be in the range of 0 - 200 ");
                 }
             }
-
         }
 
         public int Weight
@@ -81,6 +81,16 @@
         public string MakeSound(string sound)
         {
             return sound;
+        }
+
+        public virtual void Eat(string food)
+        {
+            Console.WriteLine($"Animal is eating {food}.");
+        }
+
+        public virtual void Move()
+        {
+            Console.WriteLine("The animal is moving.");
         }
     }
 }
