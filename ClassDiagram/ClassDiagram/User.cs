@@ -9,5 +9,6 @@
         public string PhoneNumber { get; set; }
         public Address Address { get; set; }
         public List<Order> Orders { get; set; }
+        public List<Vote> Votes { get; set; }
     }
 }

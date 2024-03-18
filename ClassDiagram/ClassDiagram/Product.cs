@@ -11,5 +11,7 @@
         public bool InStock { get; set; }
         public List<Vote> Votes { get; set; }
         public List<Review> Reviews { get;}
+
+        public List<Order> Orders { get; set; }
     }
 }

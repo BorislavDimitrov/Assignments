@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClassDiagram.Address">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAUAAAAAAAAAIIAAAAAgAAAIAAAAAAAAABAAQAAg=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClassDiagram.Admin" Collapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassDiagram.Cart">
+    <Position X="11.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cart.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClassDiagram.CartItem">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAA=</HashCode>
+      <FileName>CartItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cart" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClassDiagram.Category">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ClassDiagram.Order">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAADAAAAAAACCAAAAAAAAAgAAAAAQAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderStatus" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClassDiagram.OrderItem">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>OrderItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClassDiagram.PaymentMethod">
+    <Position X="15" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEDAQAAAAACAAAAAAAAAAgAQAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PaymentMethod.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClassDiagram.Product">
+    <Position X="17" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACECQEAAAQAgAAAAAAAAAAQAAAAAAAACAAAAAAAACAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ClassDiagram.Review">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAgAAAEgAAAAAAAgAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Review.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClassDiagram.User">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACECAAAAACAAAAAAAQAAQAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ClassDiagram.Vote">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABCAAAAAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vote.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="ClassDiagram.OrderStatus">
+    <Position X="3.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAgAAAAAAAACAAIAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>OrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
