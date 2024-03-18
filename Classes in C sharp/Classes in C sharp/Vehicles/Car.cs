@@ -27,5 +27,10 @@
         {
             return base.GetInfo() + $", DoorsCount: {DoorsCount}";
         }
+
+        public override void StartEngine()
+        {
+            Console.WriteLine("Car engine starting...");
+        }
     }
 }

@@ -120,6 +120,11 @@
         _currentGear--;
     }
 
+    public virtual void StartEngine()
+    {
+        Console.WriteLine("Vehicle engine starting...");
+    }
+
     public virtual string GetInfo()
     {
         return $"Make: {Make}, Model: {Model}, Year: {Year}, Color: {GetColor()}, Engine Size: {EngineSize}";

@@ -28,5 +28,10 @@
         {
             return base.GetInfo() + $", Motorbike type: {Type}";
         }
+
+        public override void StartEngine()
+        {
+            Console.WriteLine("Motorbike engine starting...");
+        }
     }
 }

@@ -52,3 +52,23 @@ if (motorbike2 is Motorbike motorbikeInstance)
 {
     Console.WriteLine(motorbikeInstance.GetInfo());
 }
+
+Console.WriteLine(new string('-', 100));
+
+var loadKilograms = 6500;
+object unknownObject = new Truck("Volvo", "FH Aero", 2017, 14000, "White", 12, 7000);
+
+if (unknownObject is Truck)
+{
+    Truck truck = unknownObject as Truck;
+    truck.Load(loadKilograms);
+    Console.WriteLine(truck.LoadedKilograms);
+    truck.Unload(4000);
+    Console.WriteLine(truck.LoadedKilograms);
+    Console.WriteLine((unknownObject as Truck).LoadedKilograms);
+}
+
+Console.WriteLine(new string('-', 100));
+
+var truck2 = new Truck("Mercedes", "Sprinter", 2021, 3000, "White", 7);
+truck2.Repair();
