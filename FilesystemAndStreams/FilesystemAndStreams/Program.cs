@@ -9,3 +9,5 @@ userService.Register("TestTest2", "testpassword123");
 userService.SignIn("TestTest", "testpassword123");
 userService.SignIn("TestTest2", "testpassword");
 
+var fileContent = await logger.ReadTodaysFileAsync();
+Console.WriteLine(fileContent);

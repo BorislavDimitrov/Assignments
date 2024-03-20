@@ -1,4 +1,6 @@
-﻿namespace FilesystemAndStreams
+﻿using System.Text;
+
+namespace FilesystemAndStreams
 {
     public class Logger : ILogger
     {
@@ -41,12 +43,52 @@
             }
         }
 
+        public async Task<string> ReadTodaysFileAsync()
+        {
+            try
+            {
+                var currentLogFileName = "Logs_" + DateTime.Today.ToString("dd-MM-yyyy") + ".txt";
+                var currentLogFilePath = Path.Combine(_logsDirectory, currentLogFileName);
+
+                using (StreamReader reader = new StreamReader(currentLogFilePath, Encoding.UTF8))
+                {
+                    string content = await reader.ReadToEndAsync();
+                    return content;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle potential exceptions like file not found or access errors
+                Console.WriteLine($"Error reading file: {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task<string> ReadFileAsync(string fileName)
+        {
+            try
+            {
+
+                using (StreamReader reader = new StreamReader(fileName, Encoding.UTF8))
+                {
+                    string content = await reader.ReadToEndAsync();
+                    return content;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle potential exceptions like file not found or access errors
+                Console.WriteLine($"Error reading file: {ex.Message}");
+                return null;
+            }
+        }
+
         private void EnsureCreateLogsDirectory()
         {
             if (File.Exists(_logsDirectory) == false)
             {
                 Directory.CreateDirectory(_logsDirectory);
             }
-        }
+        }        
     }
 }
