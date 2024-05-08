@@ -18,6 +18,8 @@ namespace DisposalAndGarbageCollection
                 mailMessage.Subject = subject;
                 mailMessage.Body = body;
 
+                mailMessage.IsBodyHtml = true;
+
                 using (var smtpClient = new SmtpClient(smtpServer, port))
                 {
                     smtpClient.EnableSsl = useSsl;
